@@ -1,18 +1,18 @@
 package ru.netology.stats;
 
 public class Radio {
-    private int currentStation;//-------Номер текущей радиостанции----
-    private int currentVolume;//--------Громкость звука-------
+    private int currentStation;
+    private int currentVolume;
 
-    public int getCurrentStation() {// получить № станции
+    public int getCurrentStation() {
         return currentStation;
     }
 
-    public void setCurrentStation(int currentStation) {//установить текущую станцию Тута
-        if (currentStation < 0) {//меньше минимума
+    public void setCurrentStation(int currentStation) {
+        if (currentStation < 0) {
             return;
         }
-        if (currentStation > 9) {//больше максимума
+        if (currentStation > 9) {
             return;
         }
         this.currentStation = currentStation;
@@ -20,46 +20,46 @@ public class Radio {
 
     public void next() {//+1 станция
         this.currentStation = currentStation + 1;
-        if (currentStation > 9) {//станций 0-9 >= 10
+        if (currentStation > 9) {
             this.currentStation = 0;
         }
     }
 
-    public void prev() {//нажал на кнопку предыдущая
+    public void prev() {
         this.currentStation = currentStation - 1;
-        if (currentStation == -1) {//было 0 стало -1 =9
+        if (currentStation == -1) {
             this.currentStation = 9;
         }
     }
 
-    public void stationInput(int currentStation) {//задать № станции
-        if (currentStation < 0) { //отриц быть не должно
+    public void stationInput(int currentStation) {
+        if (currentStation < 0) {
             return;
         }
-        if (currentStation > 9) {//>9 быть не должно
+        if (currentStation > 9) {
             return;
         }
         this.currentStation = currentStation;
     }
 
-    public int getCurrentVolume() {//получить урзвука
+    public int getCurrentVolume() {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int currentVolume) {//установить урзвука
+    public void setCurrentVolume(int currentVolume) {
         this.currentVolume = currentVolume;
     }
 
-    public void volumePlus() {//громкость+ максимального
+    public void volumePlus() {
         this.currentVolume = currentVolume + 1;
-        if (currentVolume >= 10) { //(в пределах от 0 до 10)
+        if (currentVolume >= 10) {
             this.currentVolume = 10;
         }
     }
 
-    public void volumeMinus() {//громкость- низшего
+    public void volumeMinus() {
         this.currentVolume = currentVolume - 1;
-        if (currentVolume <= 0) { //(в пределах от 0 до 10)
+        if (currentVolume <= 0) {
             this.currentVolume = 0;
         }
     }
