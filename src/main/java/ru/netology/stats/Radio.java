@@ -18,7 +18,7 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public void next() {//+1 станция
+    public void next() {
         this.currentStation = currentStation + 1;
         if (currentStation > 9) {
             this.currentStation = 0;
