@@ -8,6 +8,12 @@ public class Radio {
     private int minVolume = 0;
     private int currentVolume;
 
+    
+    public Radio() {
+        this.currentRadioStation = currentRadioStation;
+        this.currentVolume = currentVolume;
+    }
+
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
